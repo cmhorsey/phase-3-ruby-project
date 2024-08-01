@@ -21,16 +21,13 @@ Welcome to the WarmWelcomes BnB Application! This application helps you manage b
    `bundle install`
 3. Set up the database
   ```
-   bundle exec rake db:create
    bundle exec rake db:migrate
-   bundle exec rake db
-   bundle exec rake server
+   bundle exec rake db:seed
   ```
 4. Start server
    `bundle exec rake server`
 
 ### Backend Setup
-
 1. Navigate to frontend
   `cd frontend`
 2. Install dependencies
