@@ -15,6 +15,7 @@ Welcome to the WarmWelcomes BnB Application! This application helps you manage b
 1. Clone the repository:
    ```
    git clone git@github.com:cmhorsey/phase-3-ruby-project.git
+   cd phase-3-ruby-project
    cd backend
    ```
 2. Install dependencies
