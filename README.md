@@ -19,7 +19,7 @@ Welcome to the WarmWelcomes BnB Application! This application helps you manage b
    ```
 2. Install dependencies
    `bundle install`
-3.Set the database
+3. Set up the database
   ```
    bundle exec rake db:create
    bundle exec rake db:migrate
