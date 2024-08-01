@@ -6,7 +6,7 @@ import StaysList from "./StaysList"
 import BookingForm from "./BookingForm"
 
 function BnbListing({ bnb }) {
-  const { id, name, location, num_of_rooms, cost_per_night, description } = bnb
+  const { id, name, location, cost_per_night, description } = bnb
   const [guestLog, setGuestLog] = useState([])
   const [staysList, setStaysList] = useState([])
 
@@ -20,12 +20,14 @@ function BnbListing({ bnb }) {
     fetch(`http://localhost:9292/bnbs/${id}/guest_log`)
       .then((r) => r.json())
       .then((entries) => setGuestLog(entries))
+      .catch((error) => console.log(error))
   }
 
   const getStayList = () => {
     fetch(`http://localhost:9292/bnbs/${id}/stays_list`)
       .then((r) => r.json())
       .then((entries) => setStaysList(entries))
+      .catch((error) => console.log(error))
   }
 
   const handleStayListClick = () => {
@@ -42,10 +44,6 @@ function BnbListing({ bnb }) {
 
   const toggleBookingForm = () => {
     setShowBookingForm(!showBookingForm)
-  }
-
-  const handleDeleteStay = (stayId) => {
-    setStaysList((prevStays) => prevStays.filter((stay) => stay.id !== stayId))
   }
 
   const updateGuestLogEntry = (updatedEntry) => {
@@ -89,7 +87,7 @@ function BnbListing({ bnb }) {
         </h2>
         {showBookingForm && <BookingForm bnb={bnb} addNewStay={addNewStay} />}
         <h6 className="card-subtitle mb-2 text-muted">
-          Number of Rooms: {num_of_rooms} - Cost /Night: ${cost_per_night}
+          ${cost_per_night} per night
         </h6>
         <p className="card-text">{description}</p>
         <p className="card-text">
@@ -112,11 +110,7 @@ function BnbListing({ bnb }) {
           {showStaysList ? "Hide Stays List" : "View Stays List"}
         </button>
         {showStaysList && (
-          <StaysList
-            staysList={staysList}
-            onDeleteStay={handleDeleteStay}
-            addNewLogEntry={addNewLogEntry}
-          />
+          <StaysList staysList={staysList} addNewLogEntry={addNewLogEntry} />
         )}
       </div>
     </div>
