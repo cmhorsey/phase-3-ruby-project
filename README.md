@@ -1,11 +1,12 @@
 # WarmWelcomes BnB Application
 
-Welcome to the WarmWelcomes BnB Application! This application helps you manage bed and breakfast listings, guest stays, and guest logs. It provides insights into the business's performance and guest activities.
+Welcome to the WarmWelcomes BnB Application! This application helps you manage bed and breakfast listings, guest stays, and guest logs. It also provides insights into the business's performance and guest activities.
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Database Diagram](#database-diagram)
 - [API Endpoints](#api-endpoints)
 
 ## Installation
