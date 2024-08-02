@@ -45,9 +45,12 @@ Once the application is set up, you can access the backend API at `http://localh
 - View a list of all BnBs with details such as location, cost per night, and description.
 - View guest logs and stays for each BnB.
 - Add new guest log entries and stays.
-- Edit or delete guest log entries and stays.
+- Edit or delete guest log entries.
 - Sort BnBs by price or popularity.
 - View detailed revenue projections and guest statistics for each BnB.
+
+## Database Diagram
+![db-layout](ruby-db.png)
 
 ## API Endpoints
 
