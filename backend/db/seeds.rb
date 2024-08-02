@@ -5,7 +5,7 @@ Stay.destroy_all
 
 puts "creating bnbs.."
 bnb1 = Bnb.create(name: "Sunshine Retreat", location: "Charlottesville, VA", num_of_rooms: 5,
-                  cost_per_night: 120, description: "A cozy retreat in the heart of Charlottesville.")
+                  cost_per_night: 120, description: "A cozy retreat!")
 bnb2 = Bnb.create(name: "Mountain View Inn", location: "Asheville, NC", num_of_rooms: 8,
                   cost_per_night: 150, description: "Beautiful views of the mountains.")
 bnb3 = Bnb.create(name: "Seaside Escape", location: "Virginia Beach, VA", num_of_rooms: 10,
@@ -23,11 +23,11 @@ bnb8 = Bnb.create(name: "City Center Hotel", location: "New York, NY", num_of_ro
 bnb9 = Bnb.create(name: "Desert Villa", location: "Phoenix, AZ", num_of_rooms: 6,
                   cost_per_night: 170, description: "A serene escape in the desert.")
 bnb10 = Bnb.create(name: "Riverside Inn", location: "Portland, OR", num_of_rooms: 8,
-                  cost_per_night: 160, description: "Charming inn by the river.")
+                   cost_per_night: 160, description: "Charming inn by the river.")
 bnb11 = Bnb.create(name: "Island Getaway", location: "Key West, FL", num_of_rooms: 12,
-                  cost_per_night: 250, description: "Tropical island escape.")
+                   cost_per_night: 250, description: "Tropical island escape.")
 bnb12 = Bnb.create(name: "Historic Manor", location: "Savannah, GA", num_of_rooms: 9,
-                  cost_per_night: 190, description: "Elegant historic manor.")
+                   cost_per_night: 190, description: "Elegant historic manor.")
 
 puts "creating guests.."
 guest1 = Guest.create(name: "John Doe", age: 34)
@@ -63,27 +63,27 @@ stay8 = Stay.create(bnb_id: bnb8.id, guest_id: guest8.id, check_in: "2024-09-10"
 stay9 = Stay.create(bnb_id: bnb9.id, guest_id: guest9.id, check_in: "2024-09-20",
                     check_out: "2024-09-25")
 stay10 = Stay.create(bnb_id: bnb10.id, guest_id: guest10.id, check_in: "2024-10-01",
-                    check_out: "2024-10-05")
+                     check_out: "2024-10-05")
 stay11 = Stay.create(bnb_id: bnb11.id, guest_id: guest11.id, check_in: "2024-10-10",
-                    check_out: "2024-10-15")
+                     check_out: "2024-10-15")
 stay12 = Stay.create(bnb_id: bnb12.id, guest_id: guest12.id, check_in: "2024-10-20",
-                    check_out: "2024-10-25")
+                     check_out: "2024-10-25")
 stay13 = Stay.create(bnb_id: bnb1.id, guest_id: guest7.id, check_in: "2024-11-01",
-                    check_out: "2024-11-05")
+                     check_out: "2024-11-05")
 stay14 = Stay.create(bnb_id: bnb2.id, guest_id: guest8.id, check_in: "2024-11-10",
-                    check_out: "2024-11-15")
+                     check_out: "2024-11-15")
 stay15 = Stay.create(bnb_id: bnb3.id, guest_id: guest9.id, check_in: "2024-11-20",
-                    check_out: "2024-11-25")
+                     check_out: "2024-11-25")
 stay16 = Stay.create(bnb_id: bnb4.id, guest_id: guest10.id, check_in: "2024-12-01",
-                    check_out: "2024-12-05")
+                     check_out: "2024-12-05")
 stay17 = Stay.create(bnb_id: bnb5.id, guest_id: guest11.id, check_in: "2024-12-10",
-                    check_out: "2024-12-15")
+                     check_out: "2024-12-15")
 stay18 = Stay.create(bnb_id: bnb6.id, guest_id: guest12.id, check_in: "2024-12-20",
-                    check_out: "2024-12-25")
+                     check_out: "2024-12-25")
 stay19 = Stay.create(bnb_id: bnb7.id, guest_id: guest1.id, check_in: "2024-12-30",
-                    check_out: "2025-01-04")
+                     check_out: "2025-01-04")
 stay20 = Stay.create(bnb_id: bnb8.id, guest_id: guest2.id, check_in: "2025-01-10",
-                    check_out: "2025-01-15")
+                     check_out: "2025-01-15")
 
 puts "creating guest log entries.."
 GuestLogEntry.create(
