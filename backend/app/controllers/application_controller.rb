@@ -50,7 +50,7 @@ class ApplicationController < Sinatra::Base
 
     stay.save
 
-    stay.to_json(include: { guest: { only: [:name, :age] } })
+    stay.to_json(include: { guest: { only: %i[name age] } })
   end
 
   patch "/guest_log/:id" do
