@@ -28,4 +28,24 @@ RSpec.describe Bnb do
 
     expect(mercury.description).to eq('Quaint stay on the water')
   end
+
+  describe '#total_revenue' do
+    it 'calculates the total revenue based on cost per night and number of stays' do
+      bnb = Bnb.create(cost_per_night: 100)
+      Stay.create(bnb: bnb)
+      Stay.create(bnb: bnb)
+      Stay.create(bnb: bnb)
+      Stay.create(bnb: bnb)
+
+      expect(bnb.total_revenue).to eq(400)
+    end
+  end
+
+  describe '#daily_projection' do
+    it 'calculates the daily projection based on cost per night and number of rooms' do
+      bnb = Bnb.create(cost_per_night: 100, num_of_rooms: 5)
+
+      expect(bnb.daily_projection).to eq(500)
+    end
+  end
 end
