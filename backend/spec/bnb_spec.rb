@@ -48,4 +48,19 @@ RSpec.describe Bnb do
       expect(bnb.daily_projection).to eq(500)
     end
   end
+
+  describe '#avg_guest_age' do
+    it 'calculates average age of guests' do
+      bnb = Bnb.create
+      guest1 = Guest.create(age: 20)
+      guest2 = Guest.create(age: 30)
+      guest3 = Guest.create(age: 40)
+      Stay.create(bnb: bnb, guest: guest1)
+      Stay.create(bnb: bnb, guest: guest2)
+      Stay.create(bnb: bnb, guest: guest3)
+
+
+      expect(bnb.avg_guest_age).to eq(30)
+    end
+  end
 end
