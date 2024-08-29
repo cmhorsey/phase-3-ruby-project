@@ -4,4 +4,10 @@ RSpec.describe Guest do
 
     expect(sally.name).to eq('Sally')
   end
+
+  it 'has an age' do
+    sally = Guest.new(age: 23)
+
+    expect(sally.age).to eq(23)
+  end
 end
